@@ -8,13 +8,14 @@ import {
 import './ExpressionBasedPixelGen.css'
 import PixelCanvas from './PixelCanvas';
 
+const DEFAULT_SIDE_LENGTH = Math.min(1000, Math.round(0.8 * window.screen.width));
 
 const DEFAULT_QUERY_PARAMS = {
     r: "Math.abs(x) & Math.abs(y)",
     g: "Math.tanh(Math.abs(x) & Math.abs(y))",
     b: "Math.abs(x) ^ Math.abs(y)",
-    h: 1000,
-    w: 1000,
+    h: DEFAULT_SIDE_LENGTH,
+    w: DEFAULT_SIDE_LENGTH,
 };
 
 export default function ExpressionBasedPixelGen() {
