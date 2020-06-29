@@ -1,0 +1,23 @@
+.container {
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.expression-form {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
