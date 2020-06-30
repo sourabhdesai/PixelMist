@@ -47,7 +47,7 @@ export class PixelGenerator {
                 const y = heightPixels - 1 - yInverse;
                 const xInterp = linearInterpolate(x, 0, widthPixels, -scale, scale);
                 const yInterp = linearInterpolate(y, 0, heightPixels, -scale, scale);
-                const pixelVal = this.generate(xInterp, yInterp);
+                const pixelVal = this.generate(xInterp, yInterp, widthPixels, heightPixels);
                 min = Math.min(pixelVal, min);
                 max = Math.max(pixelVal, max);
                 return pixelVal;
@@ -57,7 +57,7 @@ export class PixelGenerator {
         return new PixelGeneratorResult(pixelGrid, min, max);
     }
 
-    generate(x, y) {
+    generate(x, y, w, h) {
         throw new Error("Must Implement");
     }
 }
@@ -65,10 +65,10 @@ export class PixelGenerator {
 export class ExpressionPixelGenerator extends PixelGenerator {
     constructor(expressionString) {
         super();
-        this.expressionFunc = eval(`((x, y) => ${expressionString})`);
+        this.expressionFunc = eval(`((x, y, w, h) => ${expressionString})`);
     }
 
-    generate(xInput, yInput) {
-        return this.expressionFunc(xInput, yInput);
+    generate(xInput, yInput, width, height) {
+        return this.expressionFunc(xInput, yInput, width, height);
     }
 }

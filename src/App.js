@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import './App.css';
 import ExpressionBasedPixelGen from './components/ExpressionBasedPixelGen';
+import About from './components/About';
+import Examples from './components/Examples';
 
 function App() {
   return (
@@ -15,6 +17,12 @@ function App() {
         <Switch>
           <Route exact path="/">
             <ExpressionBasedPixelGen />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/examples">
+            <Examples />
           </Route>
         </Switch>
       </Router>

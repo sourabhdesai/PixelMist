@@ -1,5 +1,6 @@
 .container {
     padding-top: 10px;
+    padding-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -20,4 +21,27 @@
 
 .blue {
     color: blue;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 5px;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(9,37,50,1) 65%);
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.footer-link {
+    margin: 0;
+    display: inline;
+    margin-left: 15px;
+    font-family: Mandalore;
+    color: white;
+    text-decoration: none;
 }

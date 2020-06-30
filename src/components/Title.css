@@ -1,0 +1,9 @@
+.pixel-mist-title {
+    color: white;
+    font-family: Mandalore;
+    font-size: 65px;
+    background: -webkit-linear-gradient(#ffffff, #475C65, #092532);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0px;
+}
