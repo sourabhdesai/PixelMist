@@ -6,12 +6,13 @@ import {
     useLocation,
     Link
   } from "react-router-dom";
+import {adjustDimension} from '../utils/ScreenUtils';
 import './Common.css';
 import './ExpressionBasedPixelGen.css'
 import Title from './Title';
 import PixelCanvas from './PixelCanvas';
 
-const DEFAULT_SIDE_LENGTH = Math.min(1000, Math.round(0.8 * window.screen.width));
+const DEFAULT_SIDE_LENGTH = Math.min(1000, adjustDimension(1000));
 
 const DEFAULT_QUERY_PARAMS = {
     r: "(Math.hypot(Math.abs(x), Math.abs(y)) + (Math.abs(x) & Math.abs(y))) / 2",

@@ -47,7 +47,8 @@ export class PixelGenerator {
                 const y = heightPixels - 1 - yInverse;
                 const xInterp = linearInterpolate(x, 0, widthPixels, -scale, scale);
                 const yInterp = linearInterpolate(y, 0, heightPixels, -scale, scale);
-                const pixelVal = this.generate(xInterp, yInterp, widthPixels, heightPixels);
+                let pixelVal = this.generate(xInterp, yInterp, widthPixels, heightPixels);
+                pixelVal = _.isNaN(pixelVal) ? 0 : pixelVal;
                 min = Math.min(pixelVal, min);
                 max = Math.max(pixelVal, max);
                 return pixelVal;

@@ -30,6 +30,14 @@
   color: #61dafb;
 }
 
+p {
+  color: white;
+}
+
+a {
+  color: yellow;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -37,4 +45,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.github-btn {
+  float: right;
+  margin-right: 15px;
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 5px;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(9,37,50,0) 0%, rgba(9,37,50,1) 65%);
+  padding-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.footer-link {
+  margin: 0;
+  display: inline;
+  margin-left: 15px;
+  font-family: Mandalore;
+  color: white;
+  text-decoration: none;
 }
