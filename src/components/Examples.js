@@ -10,7 +10,7 @@ function ImageExample({filename, r, g, b, w, h}) {
     const queryParams = new URLSearchParams({r, g, b, w, h});
     return (
         <a href={`/?${queryParams.toString()}`}>
-            <img alt={filename} className="example-img" src={`/images/examples/${filename}`} />
+            <img alt={filename} id={filename} className="example-img" src={`/images/examples/${filename}`} />
         </a>
     );
 }
