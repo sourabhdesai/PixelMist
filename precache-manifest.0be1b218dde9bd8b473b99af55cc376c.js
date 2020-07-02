@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ac490533d9e2ac6925d0adb45717de43",
+    "revision": "997ee989cee328d4b02b9fed3e279374",
     "url": "/PixelMist/index.html"
   },
   {
-    "revision": "766f84d7b83df839c2ae",
+    "revision": "bdb3cb4dc9b54ad57a1a",
     "url": "/PixelMist/static/css/main.5b256365.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PixelMist/static/js/2.04e5b799.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "766f84d7b83df839c2ae",
-    "url": "/PixelMist/static/js/main.1d99c3ba.chunk.js"
+    "revision": "bdb3cb4dc9b54ad57a1a",
+    "url": "/PixelMist/static/js/main.51da673a.chunk.js"
   },
   {
     "revision": "ba6bdea176b2ff87111b",

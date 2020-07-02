@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/PixelMist/static/css/main.5b256365.chunk.css",
-    "main.js": "/PixelMist/static/js/main.1d99c3ba.chunk.js",
-    "main.js.map": "/PixelMist/static/js/main.1d99c3ba.chunk.js.map",
+    "main.js": "/PixelMist/static/js/main.51da673a.chunk.js",
+    "main.js.map": "/PixelMist/static/js/main.51da673a.chunk.js.map",
     "runtime-main.js": "/PixelMist/static/js/runtime-main.2c15beb7.js",
     "runtime-main.js.map": "/PixelMist/static/js/runtime-main.2c15beb7.js.map",
     "static/js/2.04e5b799.chunk.js": "/PixelMist/static/js/2.04e5b799.chunk.js",
     "static/js/2.04e5b799.chunk.js.map": "/PixelMist/static/js/2.04e5b799.chunk.js.map",
     "index.html": "/PixelMist/index.html",
-    "precache-manifest.575bc0c2f43c58d15b34f026fc958fc7.js": "/PixelMist/precache-manifest.575bc0c2f43c58d15b34f026fc958fc7.js",
+    "precache-manifest.0be1b218dde9bd8b473b99af55cc376c.js": "/PixelMist/precache-manifest.0be1b218dde9bd8b473b99af55cc376c.js",
     "service-worker.js": "/PixelMist/service-worker.js",
     "static/css/main.5b256365.chunk.css.map": "/PixelMist/static/css/main.5b256365.chunk.css.map",
     "static/js/2.04e5b799.chunk.js.LICENSE.txt": "/PixelMist/static/js/2.04e5b799.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.2c15beb7.js",
     "static/js/2.04e5b799.chunk.js",
     "static/css/main.5b256365.chunk.css",
-    "static/js/main.1d99c3ba.chunk.js"
+    "static/js/main.51da673a.chunk.js"
   ]
 }
