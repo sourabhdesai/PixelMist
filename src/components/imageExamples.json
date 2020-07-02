@@ -1,34 +1,42 @@
 [
     {
-        "filename": "rainbow.jpg",
-        "r": "x + y",
-        "g": "x * y",
-        "b": "x - y",
-        "w": 1000,
-        "h": 1000
+      "filename": "warp.jpg",
+      "r": "Math.sqrt(Math.abs(x * y)) % (Math.hypot(x-w/2, y-h/2) + 1) % (255 * Math.tan(x ^ y) + 1) % (Math.abs(x - y) + 1) % 256",
+      "g": "Math.sqrt(Math.abs(x * y)) % (Math.hypot(x-w/2, y-h/2) + 1) % (255 * Math.tan(x ^ y) + 1) % (Math.abs(x - y) + 1) % 171",
+      "b": "Math.sqrt(Math.abs(x * y)) % (Math.hypot(x-w/2, y-h/2) + 1) % (255 * Math.tan(x ^ y) + 1) % (Math.abs(x - y) + 1) % 86",
+      "w": 1000,
+      "h": 1000
     },
     {
-        "filename": "circus.jpg",
-        "r": "Math.cos(Math.hypot(x, y) / Math.hypot(w / 2.5, h / 2.5)) * Math.tanh(x + y)",
-        "g": "Math.cos(Math.hypot(x, y) / Math.hypot(w / 2.5, h / 2.5)) * Math.tanh(x * y)",
-        "b": "Math.cos(Math.hypot(x, y) / Math.hypot(w / 2.5, h / 2.5)) * Math.tanh(x - y)",
-        "w": 1000,
-        "h": 1000
+      "filename": "hotspot.jpg",
+      "r": "Math.hypot(x, y)",
+      "g": "(255 * Math.tan(x ^ y) + 1) % 256",
+      "b": "(255 * Math.tan(x ^ y) + 1) % 256",
+      "w": 1000,
+      "h": 1000
     },
     {
-        "filename": "hotspot.jpg",
-        "r": "Math.hypot(x, y)",
-        "g": "(255 * Math.tan(x ^ y) + 1) % 256",
-        "b": "(255 * Math.tan(x ^ y) + 1) % 256",
-        "w": 1000,
-        "h": 1000
+      "filename": "sierpinski.jpg",
+      "r": "Math.tanh(x & y)",
+      "g": "Math.tanh(x & y)",
+      "b": "Math.tanh(x & y)",
+      "w": 1000,
+      "h": 1000
     },
     {
-        "filename": "warp.jpg",
-        "r": "Math.sqrt(Math.abs(x * y)) % (Math.hypot(x-w/2, y-h/2) + 1) % (255 * Math.tan(x ^ y) + 1) % (Math.abs(x - y) + 1) % 256",
-        "g": "Math.sqrt(Math.abs(x * y)) % (Math.hypot(x-w/2, y-h/2) + 1) % (255 * Math.tan(x ^ y) + 1) % (Math.abs(x - y) + 1) % 171",
-        "b": "Math.sqrt(Math.abs(x * y)) % (Math.hypot(x-w/2, y-h/2) + 1) % (255 * Math.tan(x ^ y) + 1) % (Math.abs(x - y) + 1) % 86",
-        "w": 1000,
-        "h": 1000
+      "filename": "circus.jpg",
+      "r": "Math.cos(Math.hypot(x, y) / Math.hypot(w / 2.5, h / 2.5)) * Math.tanh(x + y)",
+      "g": "Math.cos(Math.hypot(x, y) / Math.hypot(w / 2.5, h / 2.5)) * Math.tanh(x * y)",
+      "b": "Math.cos(Math.hypot(x, y) / Math.hypot(w / 2.5, h / 2.5)) * Math.tanh(x - y)",
+      "w": 1000,
+      "h": 1000
+    },
+    {
+      "filename": "rainbow.jpg",
+      "r": "x + y",
+      "g": "x * y",
+      "b": "x - y",
+      "w": 1000,
+      "h": 1000
     }
-]
+  ]
