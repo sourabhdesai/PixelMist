@@ -9,7 +9,7 @@ function ImageExample({filename, r, g, b, w, h}) {
     h = adjustDimension(h);
     const queryParams = new URLSearchParams({r, g, b, w, h});
     return (
-        <a href={`/?${queryParams.toString()}`}>
+        <a href={`/PixelMist?${queryParams.toString()}`}>
             <img alt={filename} id={filename} className="example-img" src={`/images/examples/${filename}`} />
         </a>
     );

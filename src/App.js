@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect
 } from "react-router-dom";
 import GitHubButton from 'react-github-btn'
 import './App.css';
@@ -16,19 +17,20 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/PixelMist">
             <ExpressionBasedPixelGen />
           </Route>
-          <Route exact path="/about">
+          <Route exact path="/PixelMist/about">
             <About />
           </Route>
-          <Route exact path="/examples">
+          <Route exact path="/PixelMist/examples">
             <Examples />
           </Route>
+          <Redirect to="/PixelMist" />
         </Switch>
         <div className="footer">
-          <Link to="/about"><h2 className="footer-link">About</h2></Link>
-          <Link to="/examples"><h2 className="footer-link">Examples</h2></Link>
+          <Link to="/PixelMist/about"><h2 className="footer-link">About</h2></Link>
+          <Link to="/PixelMist/examples"><h2 className="footer-link">Examples</h2></Link>
           <div className="github-btn">
             <GitHubButton href="https://github.com/sourabhdesai/PixelMist"
               data-color-scheme="no-preference: dark; light: dark; dark: dark;"

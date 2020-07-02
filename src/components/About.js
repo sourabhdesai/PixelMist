@@ -55,7 +55,7 @@ export default function About() {
                     <br/><br/>
                     I quickly realized that I could make images with fascinating patterns using this method. For example, I 
                     found that using the expression Math.tanh(x & y) would result in a <a href="https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle">Sierpiński triangle</a> 
-                    pattern (<Link to={`/?r=Math.tanh%28x+%26+y%29&g=Math.tanh%28x+%26+y%29&b=Math.tanh%28x+%26+y%29&h=${adjustDimension(500)}&w=${adjustDimension(500)}`}>try for yourself</Link>). 
+                    pattern (<Link to={`/PixelMist/?r=Math.tanh%28x+%26+y%29&g=Math.tanh%28x+%26+y%29&b=Math.tanh%28x+%26+y%29&h=${adjustDimension(500)}&w=${adjustDimension(500)}`}>try for yourself</Link>). 
                     I could utilize my mathematical knowledge to adjust images to match my aesthetic preferences.
                     <br/><br/>
                     Besides being a way to keep my coding skills sharp over the summer, I found myself spending hours 
