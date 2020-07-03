@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "17887a5269601b167805d04a16816b31",
+    "revision": "2c3e972e9d47c97a35653c5a192a1980",
     "url": "/PixelMist/index.html"
   },
   {
