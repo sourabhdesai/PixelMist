@@ -1,6 +1,5 @@
 import React from 'react';
 import './Examples.css';
-import {adjustDimension} from "../utils/ScreenUtils";
 import imageExamples from './imageExamples.json';
 
 function ImageExample({filename}) {
