@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/PixelMist/static/css/main.13a40e3b.chunk.css",
-    "main.js": "/PixelMist/static/js/main.d91d4baf.chunk.js",
-    "main.js.map": "/PixelMist/static/js/main.d91d4baf.chunk.js.map",
+    "main.js": "/PixelMist/static/js/main.af680a01.chunk.js",
+    "main.js.map": "/PixelMist/static/js/main.af680a01.chunk.js.map",
     "runtime-main.js": "/PixelMist/static/js/runtime-main.2c15beb7.js",
     "runtime-main.js.map": "/PixelMist/static/js/runtime-main.2c15beb7.js.map",
-    "static/js/2.f3a3d524.chunk.js": "/PixelMist/static/js/2.f3a3d524.chunk.js",
-    "static/js/2.f3a3d524.chunk.js.map": "/PixelMist/static/js/2.f3a3d524.chunk.js.map",
+    "static/js/2.a4410444.chunk.js": "/PixelMist/static/js/2.a4410444.chunk.js",
+    "static/js/2.a4410444.chunk.js.map": "/PixelMist/static/js/2.a4410444.chunk.js.map",
     "index.html": "/PixelMist/index.html",
-    "precache-manifest.f2d9ed0cfa11f240532270f3f069b671.js": "/PixelMist/precache-manifest.f2d9ed0cfa11f240532270f3f069b671.js",
+    "precache-manifest.672a40d7d6ccfb74572fa5b3a01f6500.js": "/PixelMist/precache-manifest.672a40d7d6ccfb74572fa5b3a01f6500.js",
     "service-worker.js": "/PixelMist/service-worker.js",
     "static/css/main.13a40e3b.chunk.css.map": "/PixelMist/static/css/main.13a40e3b.chunk.css.map",
-    "static/js/2.f3a3d524.chunk.js.LICENSE.txt": "/PixelMist/static/js/2.f3a3d524.chunk.js.LICENSE.txt",
+    "static/js/2.a4410444.chunk.js.LICENSE.txt": "/PixelMist/static/js/2.a4410444.chunk.js.LICENSE.txt",
     "static/media/Common.css": "/PixelMist/static/media/MandaloreHalftone-OVVBA.d3158a51.otf"
   },
   "entrypoints": [
     "static/js/runtime-main.2c15beb7.js",
-    "static/js/2.f3a3d524.chunk.js",
+    "static/js/2.a4410444.chunk.js",
     "static/css/main.13a40e3b.chunk.css",
-    "static/js/main.d91d4baf.chunk.js"
+    "static/js/main.af680a01.chunk.js"
   ]
 }
