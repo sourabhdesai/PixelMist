@@ -6,12 +6,20 @@ import {
   Link,
   Redirect
 } from "react-router-dom";
-import GitHubButton from 'react-github-btn'
+import {createBrowserHistory} from 'history';
+import ReactGA from 'react-ga';
+import GitHubButton from 'react-github-btn';
 import './App.css';
 import Title from './components/Title';
 import ExpressionBasedPixelGen from './components/ExpressionBasedPixelGen';
 import About from './components/About';
 import Examples from './components/Examples';
+
+const history = createBrowserHistory();
+history.listen(location => {
+  ReactGA.set({ page: location.pathname })
+  ReactGA.pageview(location.pathname)
+})
 
 function App() {
   return (

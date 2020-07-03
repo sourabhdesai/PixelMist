@@ -11,6 +11,7 @@
     "lodash": "^4.17.15",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-ga": "^3.0.0",
     "react-github-btn": "^1.2.0",
     "react-hook-form": "^5.7.2",
     "react-router": "^5.2.0",
