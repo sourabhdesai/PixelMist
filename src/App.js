@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import GitHubButton from 'react-github-btn'
 import './App.css';
+import Title from './components/Title';
 import ExpressionBasedPixelGen from './components/ExpressionBasedPixelGen';
 import About from './components/About';
 import Examples from './components/Examples';
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Title />
         <Switch>
           <Route exact path="/PixelMist">
             <ExpressionBasedPixelGen />

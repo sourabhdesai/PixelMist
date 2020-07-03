@@ -9,7 +9,6 @@ import {
 import {adjustDimension} from '../utils/ScreenUtils';
 import './Common.css';
 import './ExpressionBasedPixelGen.css'
-import Title from './Title';
 import PixelCanvas from './PixelCanvas';
 
 const DEFAULT_SIDE_LENGTH = Math.min(1000, adjustDimension(1000));
@@ -55,7 +54,6 @@ export default function ExpressionBasedPixelGen() {
 
     return (
         <div>
-            <Title />
             <div className="container">
                 <PixelCanvas width={Number(w)} height={Number(h)} red={r} green={g} blue={b}></PixelCanvas>
                 <form className="expression-form" onSubmit={handleSubmit(onFormSubmit)}>
