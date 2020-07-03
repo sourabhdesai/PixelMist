@@ -3,10 +3,8 @@ import './Examples.css';
 import {adjustDimension} from "../utils/ScreenUtils";
 import imageExamples from './imageExamples.json';
 
-function ImageExample({filename, r, g, b, w, h}) {
-    w = adjustDimension(w);
-    h = adjustDimension(h);
-    const queryParams = new URLSearchParams({r, g, b, w, h});
+function ImageExample({filename}) {
+    const queryParams = new URLSearchParams({example: filename});
     return (
         <a href={`/PixelMist?${queryParams.toString()}`} key={filename}>
             <img alt={filename} id={filename} className="example-img" src={`/PixelMist/images/examples/${filename}`} />

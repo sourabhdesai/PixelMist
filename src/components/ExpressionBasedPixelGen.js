@@ -7,6 +7,7 @@ import {
     Link
   } from "react-router-dom";
 import {adjustDimension} from '../utils/ScreenUtils';
+import imageExamples from './imageExamples.json';
 import './Common.css';
 import './ExpressionBasedPixelGen.css'
 import PixelCanvas from './PixelCanvas';
@@ -21,6 +22,15 @@ const DEFAULT_QUERY_PARAMS = {
     w: DEFAULT_SIDE_LENGTH,
 };
 
+function getExampleParams(exampleFilename) {
+    const exampleObj = _.find(imageExamples, {filename: exampleFilename});
+    if (exampleObj) {
+        exampleObj.w = Math.min(exampleObj.w, adjustDimension(exampleObj.w));
+        exampleObj.h = Math.min(exampleObj.h, adjustDimension(exampleObj.h));
+    }
+    return exampleObj ? _.pick(exampleObj, ['r', 'g', 'b', 'w', 'h']) : null;
+}
+
 export default function ExpressionBasedPixelGen() {
     console.log("Called ExpressionBasedPixelGen");
     const history = useHistory();
@@ -28,10 +38,11 @@ export default function ExpressionBasedPixelGen() {
     const { register, handleSubmit } = useForm();
 
     const givenSearchParams = new URLSearchParams(location.search);
+    const exampleFilename = givenSearchParams.get('example') || null;
+    const exampleParams = exampleFilename ? getExampleParams(exampleFilename) || {} : {};
     const givenSearchParamsObj = Object.fromEntries(givenSearchParams.entries());
-    const queryParamsAfterDefaults = _.mapValues(DEFAULT_QUERY_PARAMS, (value, key) => {
-        return givenSearchParams.get(key) || value;
-    });
+    const queryParamsAfterDefaults = _.defaults(_.cloneDeep(givenSearchParamsObj), exampleParams, DEFAULT_QUERY_PARAMS);
+    delete queryParamsAfterDefaults.example;
 
     let shouldUpdateQueryParams = !_.isEqual(queryParamsAfterDefaults, givenSearchParamsObj);
     if (shouldUpdateQueryParams) {
