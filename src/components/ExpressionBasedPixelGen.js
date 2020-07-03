@@ -42,13 +42,13 @@ export default function ExpressionBasedPixelGen() {
     const exampleParams = exampleFilename ? getExampleParams(exampleFilename) || {} : {};
     const givenSearchParamsObj = Object.fromEntries(givenSearchParams.entries());
     const queryParamsAfterDefaults = _.defaults(_.cloneDeep(givenSearchParamsObj), exampleParams, DEFAULT_QUERY_PARAMS);
-    delete queryParamsAfterDefaults.example;
+    const cleanedParams = _.pick(queryParamsAfterDefaults, Object.keys(DEFAULT_QUERY_PARAMS));
 
-    let shouldUpdateQueryParams = !_.isEqual(queryParamsAfterDefaults, givenSearchParamsObj);
+    let shouldUpdateQueryParams = !_.isEqual(cleanedParams, givenSearchParamsObj);
     if (shouldUpdateQueryParams) {
         history.push({
             pathname: location.pathname,
-            search: new URLSearchParams(queryParamsAfterDefaults).toString()
+            search: new URLSearchParams(cleanedParams).toString()
         });
         return null;
     }
