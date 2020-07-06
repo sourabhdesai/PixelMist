@@ -2,6 +2,8 @@
 import _ from "lodash";
 import { BitMap } from 'glaciall-bitmap';
 
+const PROGRESS_UPDATE_INTERVAL = 5;
+
 export function clamp(n, min, max) {
     return Math.min(Math.max(n, min), max);
 }
@@ -108,7 +110,9 @@ function rgbChannelProgressCbGenerator() {
         return (progress) => {
             channelProgress[channel] = progress;
             const totalProgress = _.sum(_.values(channelProgress)) / 3.0;
-            postMessage({totalProgress});
+            if ((Math.round(totalProgress * 100) % PROGRESS_UPDATE_INTERVAL) === 0) {
+                postMessage({totalProgress});
+            }
         };
     };
 }

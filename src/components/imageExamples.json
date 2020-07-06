@@ -20,8 +20,8 @@
       "r": "Math.tanh(x & y)",
       "g": "Math.tanh(x & y)",
       "b": "Math.tanh(x & y)",
-      "w": 1000,
-      "h": 1000
+      "w": 1024,
+      "h": 1024
     },
     {
       "filename": "circus.jpg",
@@ -36,6 +36,14 @@
       "r": "x + y",
       "g": "x * y",
       "b": "x - y",
+      "w": 1000,
+      "h": 1000
+    },
+    {
+      "filename": "spiderweb.jpg",
+      "r": "Math.sqrt(Math.abs(x) % Math.abs(y)) * Math.sqrt(Math.abs(y) % Math.abs(x)) % 100",
+      "g": "Math.sqrt(Math.abs(x) % Math.abs(y)) * Math.sqrt(Math.abs(y) % Math.abs(x)) % 200",
+      "b": "Math.sqrt(Math.abs(x) % Math.abs(y)) * Math.sqrt(Math.abs(y) % Math.abs(x)) % 50",
       "w": 1000,
       "h": 1000
     }

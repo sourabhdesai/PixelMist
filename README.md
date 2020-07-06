@@ -13,3 +13,5 @@ Use it to create images like these:
 [![Circus](https://sourabhdesai.github.io/PixelMist/images/examples/circus.jpg)](https://sourabhdesai.github.io/PixelMist/?example=circus.jpg)
 
 [![Hotspot](https://sourabhdesai.github.io/PixelMist/images/examples/hotspot.jpg)](https://sourabhdesai.github.io/PixelMist/?example=hotspot.jpg)
+
+[![Spider-Web](https://sourabhdesai.github.io/PixelMist/images/examples/spiderweb.jpg)](https://sourabhdesai.github.io/PixelMist/?example=spiderweb.jpg)

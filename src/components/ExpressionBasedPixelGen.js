@@ -12,7 +12,7 @@ import './Common.css';
 import './ExpressionBasedPixelGen.css'
 import PixelCanvas from './PixelCanvas';
 
-const DEFAULT_SIDE_LENGTH = Math.min(1000, adjustDimension(1000));
+const DEFAULT_SIDE_LENGTH = Math.min(1024, adjustDimension(1024));
 
 const DEFAULT_QUERY_PARAMS = {
     r: "(Math.hypot(Math.abs(x), Math.abs(y)) + (Math.abs(x) & Math.abs(y))) / 2",

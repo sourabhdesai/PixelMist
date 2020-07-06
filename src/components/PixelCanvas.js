@@ -4,8 +4,7 @@ import _ from "lodash";
 import PixelGenerationWorker from 'workerize-loader!../utils/pixelgeneration.worker.js';
 import './PixelCanvas.css'
 
-const DEFAULT_SCALE = 1000;
-const PROGRESS_UPDATE_INTERVAL = 5;
+const DEFAULT_SCALE = 1024;
 const workerInstance = PixelGenerationWorker();
 let workerReady = false;
 
@@ -36,9 +35,7 @@ export default function PixelCanvas({ width, height, red, green, blue }) {
                 setParamsInProgress(null);
             } else if (message.data.totalProgress) {
                 const newProgress = Math.round(message.data.totalProgress * 100);
-                if ((newProgress % PROGRESS_UPDATE_INTERVAL) === 0) {
-                    setProgress(newProgress);
-                }
+                setProgress(newProgress);
             }
         };
 
@@ -48,8 +45,11 @@ export default function PixelCanvas({ width, height, red, green, blue }) {
         }
     });
 
-    if (_.isNil(imageBase64Src) || !workerIsReady || (paramsChanged && currParamsAreInProgress)) {
-        return <p>Loading {`${progress}%`}...</p>
+    const shouldShowLoading = _.isNil(imageBase64Src) || !workerIsReady || (paramsChanged && currParamsAreInProgress);
+    const LoadingText = () => progress === 100 ? <p>Finishing Touches...</p> : <p>Loading {`${progress}%`}...</p>;
+
+    if (shouldShowLoading) {
+        return <LoadingText />
     } else {
         return (<img width={`${width}px`} height={`${height}px`} src={imageBase64Src} className="main-canvas" />);
     }
