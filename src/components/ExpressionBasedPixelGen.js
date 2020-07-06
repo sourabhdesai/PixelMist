@@ -5,14 +5,14 @@ import {
     useHistory,
     useLocation,
     Link
-  } from "react-router-dom";
-import {adjustDimension} from '../utils/ScreenUtils';
+} from "react-router-dom";
+import { adjustDimension, powerOf2ScreenWidth } from '../utils/ScreenUtils';
 import imageExamples from './imageExamples.json';
 import './Common.css';
 import './ExpressionBasedPixelGen.css'
 import PixelCanvas from './PixelCanvas';
 
-const DEFAULT_SIDE_LENGTH = Math.min(1024, adjustDimension(1024));
+const DEFAULT_SIDE_LENGTH = Math.min(1024, powerOf2ScreenWidth());
 
 const DEFAULT_QUERY_PARAMS = {
     r: "(Math.hypot(Math.abs(x), Math.abs(y)) + (Math.abs(x) & Math.abs(y))) / 2",
@@ -28,7 +28,7 @@ function getExampleParams(exampleFilename) {
         exampleObj.w = Math.min(exampleObj.w, adjustDimension(exampleObj.w));
         exampleObj.h = Math.min(exampleObj.h, adjustDimension(exampleObj.h));
     }
-    return exampleObj ? _.pick(exampleObj, ['r', 'g', 'b', 'w', 'h']) : null;
+    return exampleObj ? _.pick(exampleObj, ['r', 'g', 'b', 'w', 'h', 'powerOf2Dim']) : null;
 }
 
 export default function ExpressionBasedPixelGen() {
@@ -42,6 +42,15 @@ export default function ExpressionBasedPixelGen() {
     const exampleParams = exampleFilename ? getExampleParams(exampleFilename) || {} : {};
     const givenSearchParamsObj = Object.fromEntries(givenSearchParams.entries());
     const queryParamsAfterDefaults = _.defaults(_.cloneDeep(givenSearchParamsObj), exampleParams, DEFAULT_QUERY_PARAMS);
+
+    // If there is a param called powerOf2Dim, default w & h to be the best power of 2
+    if (queryParamsAfterDefaults.powerOf2Dim === 'true' || queryParamsAfterDefaults.powerOf2Dim === true) {
+        queryParamsAfterDefaults.w = powerOf2ScreenWidth();
+        queryParamsAfterDefaults.h = powerOf2ScreenWidth();
+        console.log({queryParamsAfterDefaults});
+        delete queryParamsAfterDefaults.powerOf2Dim;
+    }
+
     const cleanedParams = _.pick(queryParamsAfterDefaults, Object.keys(DEFAULT_QUERY_PARAMS));
 
     let shouldUpdateQueryParams = !_.isEqual(cleanedParams, givenSearchParamsObj);

@@ -20,8 +20,7 @@
       "r": "Math.tanh(x & y)",
       "g": "Math.tanh(x & y)",
       "b": "Math.tanh(x & y)",
-      "w": 1024,
-      "h": 1024
+      "powerOf2Dim": true
     },
     {
       "filename": "circus.jpg",
