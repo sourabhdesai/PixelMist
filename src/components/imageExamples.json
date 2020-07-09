@@ -8,10 +8,34 @@
       "h": 1000
     },
     {
+      "filename": "disco.jpg",
+      "r": "Math.hypot(x, y + x) % 100",
+      "g": "Math.hypot(1 - Math.abs(x/w), 1 - Math.abs(y/h))",
+      "b": "Math.hypot(x - y, y) % 150",
+      "w": 1000,
+      "h": 1000
+    },
+    {
       "filename": "hotspot.jpg",
       "r": "Math.hypot(x, y)",
       "g": "(255 * Math.tan(x ^ y) + 1) % 256",
       "b": "(255 * Math.tan(x ^ y) + 1) % 256",
+      "w": 1000,
+      "h": 1000
+    },
+    {
+      "filename": "spiderweb.jpg",
+      "r": "Math.sqrt(Math.abs(x) % Math.abs(y)) * Math.sqrt(Math.abs(y) % Math.abs(x)) % 100",
+      "g": "Math.sqrt(Math.abs(x) % Math.abs(y)) * Math.sqrt(Math.abs(y) % Math.abs(x)) % 200",
+      "b": "Math.sqrt(Math.abs(x) % Math.abs(y)) * Math.sqrt(Math.abs(y) % Math.abs(x)) % 50",
+      "w": 1000,
+      "h": 1000
+    },
+    {
+      "filename": "cursed_eclipse.jpg",
+      "r": "Math.hypot(x, y + 500)",
+      "g": "Math.hypot(x, y) % (500 % Math.hypot(x, y))",
+      "b": "Math.hypot(x, y - 500)",
       "w": 1000,
       "h": 1000
     },
@@ -35,14 +59,6 @@
       "r": "x + y",
       "g": "x * y",
       "b": "x - y",
-      "w": 1000,
-      "h": 1000
-    },
-    {
-      "filename": "spiderweb.jpg",
-      "r": "Math.sqrt(Math.abs(x) % Math.abs(y)) * Math.sqrt(Math.abs(y) % Math.abs(x)) % 100",
-      "g": "Math.sqrt(Math.abs(x) % Math.abs(y)) * Math.sqrt(Math.abs(y) % Math.abs(x)) % 200",
-      "b": "Math.sqrt(Math.abs(x) % Math.abs(y)) * Math.sqrt(Math.abs(y) % Math.abs(x)) % 50",
       "w": 1000,
       "h": 1000
     }

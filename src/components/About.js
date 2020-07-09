@@ -29,7 +29,7 @@ export default function About() {
                     Width & height are used to specify dimensions of the generated image in number of pixels.
                     <br/><br/>
                     The RGB expressions are used to dictate what the color of each individual pixel should be at each XY coordinate in the image.
-                    This uses a cartesian coordinate system where the origin (0,0) is at the center of the image. Both the X & Y axis have a maximum absolute value of 1000.
+                    This uses a cartesian coordinate system where the origin (0,0) is at the center of the image. Both the X & Y axis have a maximum absolute value of 1024.
                     <br/><br/>
                     You're really specifying <code>R(x, y), G(x, y), B(x, y)</code>. Those values are calculated for the entire dimensions of the image. 
                     <br/><br/>
