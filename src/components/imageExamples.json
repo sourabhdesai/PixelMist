@@ -40,6 +40,14 @@
       "h": 1000
     },
     {
+      "filename": "deep_bass.jpg",
+      "r": "Math.hypot(x,y)",
+      "g": "Math.hypot(x + (28 * Math.sin(x)), y + x) % 100",
+      "b": "Math.hypot(x + (28 * Math.cos(x)), y + x) % 110",
+      "w": 1000,
+      "h": 1000
+    },
+    {
       "filename": "sierpinski.jpg",
       "r": "Math.tanh(x & y)",
       "g": "Math.tanh(x & y)",

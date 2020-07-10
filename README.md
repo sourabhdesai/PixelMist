@@ -14,6 +14,8 @@ Use it to create images like these:
 
 [![Cursed Eclipse](https://sourabhdesai.github.io/PixelMist/images/examples/cursed_eclipse.jpg)](https://sourabhdesai.github.io/PixelMist/?example=cursed_eclipse.jpg)
 
+[![Deep Bass](https://sourabhdesai.github.io/PixelMist/images/examples/deep_bass.jpg)](https://sourabhdesai.github.io/PixelMist/?example=deep_bass.jpg)
+
 [![Rainbow](https://sourabhdesai.github.io/PixelMist/images/examples/rainbow.jpg)](https://sourabhdesai.github.io/PixelMist/?example=rainbow.jpg)
 
 [![Sierpinksi](https://sourabhdesai.github.io/PixelMist/images/examples/sierpinski.jpg)](https://sourabhdesai.github.io/PixelMist/?example=sierpinski.jpg)
