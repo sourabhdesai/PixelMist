@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "16f72bf6326d2da1ac022287195260cb",
-    "url": "/PixelMist/1b0187acc72b1184ac52.worker.js"
+    "revision": "6e0b12ffde2c767db9a8dcfc5d4d8a25",
+    "url": "/PixelMist/8136daaf7b9b6e1dd8ef.worker.js"
   },
   {
     "revision": "275fe79abee3b697f1673c8bd9c58856",
-    "url": "/PixelMist/1b0187acc72b1184ac52.worker.js.LICENSE.txt"
+    "url": "/PixelMist/8136daaf7b9b6e1dd8ef.worker.js.LICENSE.txt"
   },
   {
-    "revision": "6ad7dde27cf9d9adb66c0944fe190969",
+    "revision": "482a24a57c7fe249f19234330c6ceb76",
     "url": "/PixelMist/index.html"
   },
   {
-    "revision": "01edfd5e5daecf8880af",
-    "url": "/PixelMist/static/css/main.13a40e3b.chunk.css"
+    "revision": "85cf200ce02d13502a0d",
+    "url": "/PixelMist/static/css/main.2e7add3b.chunk.css"
   },
   {
     "revision": "d71fd108d6e7f6dba5d3",
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PixelMist/static/js/2.a1303145.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "01edfd5e5daecf8880af",
-    "url": "/PixelMist/static/js/main.dc7b6cc0.chunk.js"
+    "revision": "85cf200ce02d13502a0d",
+    "url": "/PixelMist/static/js/main.ff92ff37.chunk.js"
   },
   {
     "revision": "ba6bdea176b2ff87111b",

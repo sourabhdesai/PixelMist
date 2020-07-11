@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/PixelMist/precache-manifest.204e724e7ab908c9156760b1d232c3fd.js"
+  "/PixelMist/precache-manifest.5ea4ed76e9218942ad2c8a5a20a39f0e.js"
 );
 
 self.addEventListener('message', (event) => {
