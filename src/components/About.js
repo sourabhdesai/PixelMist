@@ -37,6 +37,7 @@ export default function About() {
                     linearly interpolated. The outputs for the individual R, G, & B channels are then coalesced to create the resulting image.
                     <br/><br/>
                     The expressions you write can do anything you can do in vanilla Javascript. That means you have full access to the <a target="_blank" href="https://www.w3schools.com/js/js_math.asp">Math</a> object.
+                    For convenience, you can access all <code>Math</code> properties without having to write the <code>Math.</code> prefix. For example, instead of writing <code>Math.sin(x)</code>, just write <code>sin(x)</code>.
                     Also, in addition to being able to use the dynamic variables x & y which represent a pixel's coordinate position, you can 
                     also reference static variables w & h which represent the width & height of the output image.
                     <br/><br/>

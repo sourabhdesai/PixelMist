@@ -15,9 +15,9 @@ import PixelCanvas from './PixelCanvas';
 const DEFAULT_SIDE_LENGTH = Math.min(1024, powerOf2ScreenWidth());
 
 const DEFAULT_QUERY_PARAMS = {
-    r: "(Math.hypot(Math.abs(x), Math.abs(y)) + (Math.abs(x) & Math.abs(y))) / 2",
-    g: "Math.tanh(Math.abs(x) & Math.abs(y))",
-    b: "Math.abs(x) ^ Math.abs(y)",
+    r: "(hypot(abs(x), abs(y)) + (abs(x) & abs(y))) / 2",
+    g: "tanh(abs(x) & abs(y))",
+    b: "abs(x) ^ abs(y)",
     h: DEFAULT_SIDE_LENGTH,
     w: DEFAULT_SIDE_LENGTH,
 };
@@ -76,15 +76,21 @@ export default function ExpressionBasedPixelGen() {
         <div>
             <div className="container">
                 <PixelCanvas width={Number(w)} height={Number(h)} red={r} green={g} blue={b}></PixelCanvas>
-                <form className="expression-form" onSubmit={handleSubmit(onFormSubmit)}>
-                    <input type="number" name="w" min="1" placeholder="Width in pixels" defaultValue={Number(w)} ref={register({ required: true })} />
-                    <input type="number" name="h" min="1" placeholder="Height in pixels" defaultValue={Number(h)} ref={register({ required: true })} />
+                <form className="expression-form" autoComplete="off" autoCapitalize="off" onSubmit={handleSubmit(onFormSubmit)}>
+                    <input type="hidden" autoComplete="false" />
+                    <input type="number" name="w" min="1" placeholder="Width in pixels" className="form-input"
+                        defaultValue={Number(w)} ref={register({ required: true })} />
+                    <input type="number" name="h" min="1" placeholder="Height in pixels" className="form-input"
+                        defaultValue={Number(h)} ref={register({ required: true })} />
                     <br />
-                    <input type="input" name="r" placeholder="Red Expression" defaultValue={r} ref={register({ required: true })} className="red" />
+                    <input type="input" name="r" placeholder="Red Expression" className="form-input red"
+                        defaultValue={r} ref={register({ required: true })} />
                     <br />
-                    <input type="input" name="g" placeholder="Green Expression" defaultValue={g} ref={register({ required: true })} className="green" />
+                    <input type="input" name="g" placeholder="Green Expression" className="form-input green"
+                        defaultValue={g} ref={register({ required: true })} />
                     <br />
-                    <input type="input" name="b" placeholder="Blue Expression" defaultValue={b} ref={register({ required: true })} className="blue" />
+                    <input type="input" name="b" placeholder="Blue Expression" className="form-input blue"
+                        defaultValue={b} ref={register({ required: true })} />
                     <br />
                     <input type="submit" value="Submit" />
                 </form>

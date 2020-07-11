@@ -69,14 +69,16 @@ export class PixelGenerator {
     }
 }
 
+const MATH_PROPS_STR = Object.getOwnPropertyNames(Math).join(',');
+
 class ExpressionPixelGenerator extends PixelGenerator {
     constructor(expressionString) {
         super();
-        this.expressionFunc = eval(`((x, y, w, h) => ${expressionString})`);
+        this.expressionFunc = eval(`((x, y, w, h,{${MATH_PROPS_STR}}) => Number(${expressionString}))`);
     }
 
     generate(xInput, yInput, width, height) {
-        return this.expressionFunc(xInput, yInput, width, height);
+        return this.expressionFunc(xInput, yInput, width, height, Math);
     }
 }
 
