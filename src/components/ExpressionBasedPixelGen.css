@@ -6,6 +6,11 @@
     text-align: center;
 }
 
+.form-error-msg {
+    color: #ffb347;
+    margin: 0px;
+}
+
 .expression-form {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -30,25 +35,32 @@
 .form-input:focus, 
 .form-input:active  {
     opacity: 1;
-    background: linear-gradient(90deg, rgba(9,37,50,1) 0%, rgba(255,255,255,.05) 80%);
+    background: rgba(255,255,255,.01);
     transition: opacity .4s, border-color .4s, background 1s;
     border-color: rgb(198, 211, 19);
 }
 
+.form-input:focus, 
+.form-input:active {
+    background: rgba(255,255,255,.05);
+}
+
 .red {
     border-color: red;
+    margin-bottom: 0px;
     width: 300px;
 }
 
 .green {
     border-color: green;
+    margin-bottom: 0px;
     width: 300px;
 }
 
 .blue {
     border-color: blue;
+    margin-bottom: 0px;
     width: 300px;
-    margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 600px) {

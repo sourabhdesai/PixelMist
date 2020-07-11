@@ -35,7 +35,7 @@ p {
 }
 
 a {
-  color: yellow;
+  color: rgb(198, 211, 19);
 }
 
 @keyframes App-logo-spin {

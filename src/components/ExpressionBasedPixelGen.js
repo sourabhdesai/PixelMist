@@ -31,11 +31,24 @@ function getExampleParams(exampleFilename) {
     return exampleObj ? _.pick(exampleObj, ['r', 'g', 'b', 'w', 'h', 'powerOf2Dim']) : null;
 }
 
+function validateExpression(expressionStr) {
+    try {
+        const MATH_PROPS_STR = Object.getOwnPropertyNames(Math).join(',');
+        const exprFunc = eval(`((x, y, w, h,{${MATH_PROPS_STR}}) => Number(${expressionStr}))`);
+        // Actually invoke it with dummy args to be safe
+        exprFunc(0, 0, DEFAULT_SIDE_LENGTH, DEFAULT_SIDE_LENGTH, Math);
+        return true;
+    } catch (err) {
+        console.error(`Received Validation Error for Expression '${expressionStr}'`, err);
+        return false;
+    }
+}
+
 export default function ExpressionBasedPixelGen() {
     console.log("Called ExpressionBasedPixelGen");
     const history = useHistory();
     const location = useLocation();
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, errors } = useForm();
 
     const givenSearchParams = new URLSearchParams(location.search);
     const exampleFilename = givenSearchParams.get('example') || null;
@@ -66,10 +79,16 @@ export default function ExpressionBasedPixelGen() {
 
     function onFormSubmit(formData) {
         const newQueryParams = _.pick(formData, Object.keys(DEFAULT_QUERY_PARAMS));
-        history.push({
-            pathname: location.pathname,
-            search: new URLSearchParams(newQueryParams).toString()
-        });
+        if (_.isEmpty(errors)) {
+            history.push({
+                pathname: location.pathname,
+                search: new URLSearchParams(newQueryParams).toString()
+            });
+        }
+    }
+
+    function ErrorMessage({hasError=false,message='Invalid input'}) {
+        return (<p className="form-error-msg">{hasError ? message: ''}</p>);
     }
 
     return (
@@ -84,14 +103,17 @@ export default function ExpressionBasedPixelGen() {
                         defaultValue={Number(h)} ref={register({ required: true })} />
                     <br />
                     <input type="input" name="r" placeholder="Red Expression" className="form-input red"
-                        defaultValue={r} ref={register({ required: true })} />
+                        defaultValue={r} ref={register({ required: true, validate: validateExpression })} />
+                    <ErrorMessage hasError={errors.r} />
                     <br />
                     <input type="input" name="g" placeholder="Green Expression" className="form-input green"
-                        defaultValue={g} ref={register({ required: true })} />
+                        defaultValue={g} ref={register({ required: true, validate: validateExpression })} />
+                    <ErrorMessage hasError={errors.g} />
                     <br />
                     <input type="input" name="b" placeholder="Blue Expression" className="form-input blue"
-                        defaultValue={b} ref={register({ required: true })} />
-                    <br />
+                        defaultValue={b} ref={register({ required: true, validate: validateExpression })} />
+                    <ErrorMessage hasError={errors.b} />
+                    <br style={{marginBottom: '15px'}} />
                     <input type="submit" value="Submit" />
                 </form>
                 <div className="footer">
