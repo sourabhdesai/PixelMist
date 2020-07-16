@@ -10,6 +10,8 @@ Use it to create images like these:
 
 [![Hotspot](https://sourabhdesai.github.io/PixelMist/images/examples/hotspot.jpg)](https://sourabhdesai.github.io/PixelMist/?example=hotspot.jpg)
 
+[![Sierpinski's Trip](https://sourabhdesai.github.io/PixelMist/images/examples/sierpinskis_trip.jpg)](https://sourabhdesai.github.io/PixelMist/?example=sierpinskis_trip.jpg)
+
 [![Spider-Web](https://sourabhdesai.github.io/PixelMist/images/examples/spiderweb.jpg)](https://sourabhdesai.github.io/PixelMist/?example=spiderweb.jpg)
 
 [![Cursed Eclipse](https://sourabhdesai.github.io/PixelMist/images/examples/cursed_eclipse.jpg)](https://sourabhdesai.github.io/PixelMist/?example=cursed_eclipse.jpg)
