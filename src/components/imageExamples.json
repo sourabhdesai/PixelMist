@@ -1,80 +1,87 @@
 [
-    {
-      "filename": "warp.jpg",
-      "r": "sqrt(abs(x * y)) % (hypot(x-w/2, y-h/2) + 1) % (255 * tan(x ^ y) + 1) % (abs(x - y) + 1) % 256",
-      "g": "sqrt(abs(x * y)) % (hypot(x-w/2, y-h/2) + 1) % (255 * tan(x ^ y) + 1) % (abs(x - y) + 1) % 171",
-      "b": "sqrt(abs(x * y)) % (hypot(x-w/2, y-h/2) + 1) % (255 * tan(x ^ y) + 1) % (abs(x - y) + 1) % 86",
-      "w": 1000,
-      "h": 1000
-    },
-    {
-      "filename": "disco.jpg",
-      "r": "hypot(x, y + x) % 100",
-      "g": "hypot(1 - abs(x/w), 1 - abs(y/h))",
-      "b": "hypot(x - y, y) % 150",
-      "w": 1000,
-      "h": 1000
-    },
-    {
-      "filename": "hotspot.jpg",
-      "r": "hypot(x, y)",
-      "g": "(255 * tan(x ^ y) + 1) % 256",
-      "b": "(255 * tan(x ^ y) + 1) % 256",
-      "w": 1000,
-      "h": 1000
-    },
-    {
-      "filename": "sierpinskis_trip.jpg",
-      "r": "(abs(x) ^ abs(y)) % (abs(x) & abs(y)) % 50",
-      "g": "(abs(x) ^ abs(y)) % (abs(x) & abs(y)) % 100",
-      "b": "(abs(x) ^ abs(y)) % (abs(x) & abs(y)) % 200",
-      "powerOf2Dim": true
-    },
-    {
-      "filename": "spiderweb.jpg",
-      "r": "sqrt(abs(x) % abs(y)) * sqrt(abs(y) % abs(x)) % 100",
-      "g": "sqrt(abs(x) % abs(y)) * sqrt(abs(y) % abs(x)) % 200",
-      "b": "sqrt(abs(x) % abs(y)) * sqrt(abs(y) % abs(x)) % 50",
-      "w": 1000,
-      "h": 1000
-    },
-    {
-      "filename": "cursed_eclipse.jpg",
-      "r": "hypot(x, y + 500)",
-      "g": "hypot(x, y) % (500 % hypot(x, y))",
-      "b": "hypot(x, y - 500)",
-      "w": 1000,
-      "h": 1000
-    },
-    {
-      "filename": "deep_bass.jpg",
-      "r": "hypot(x,y)",
-      "g": "hypot(x + (28 * sin(x)), y + x) % 100",
-      "b": "hypot(x + (28 * cos(x)), y + x) % 110",
-      "w": 1000,
-      "h": 1000
-    },
-    {
-      "filename": "sierpinski.jpg",
-      "r": "tanh(x & y)",
-      "g": "tanh(x & y)",
-      "b": "tanh(x & y)",
-      "powerOf2Dim": true
-    },
-    {
-      "filename": "circus.jpg",
-      "r": "cos(hypot(x, y) / hypot(w / 2.5, h / 2.5)) * tanh(x + y)",
-      "g": "cos(hypot(x, y) / hypot(w / 2.5, h / 2.5)) * tanh(x * y)",
-      "b": "cos(hypot(x, y) / hypot(w / 2.5, h / 2.5)) * tanh(x - y)",
-      "w": 1000,
-      "h": 1000
-    },
-    {
-      "filename": "rainbow.jpg",
-      "r": "x + y",
-      "g": "x * y",
-      "b": "x - y",
-      "w": 1000,
-      "h": 1000
-    }
-  ]
+  {
+    "filename": "warp.jpg",
+    "r": "sqrt(abs(x * y)) % (hypot(x-w/2, y-h/2) + 1) % (255 * tan(x ^ y) + 1) % (abs(x - y) + 1) % 256",
+    "g": "sqrt(abs(x * y)) % (hypot(x-w/2, y-h/2) + 1) % (255 * tan(x ^ y) + 1) % (abs(x - y) + 1) % 171",
+    "b": "sqrt(abs(x * y)) % (hypot(x-w/2, y-h/2) + 1) % (255 * tan(x ^ y) + 1) % (abs(x - y) + 1) % 86",
+    "w": 1000,
+    "h": 1000
+  },
+  {
+    "filename": "disco.jpg",
+    "r": "hypot(x, y + x) % 100",
+    "g": "hypot(1 - abs(x/w), 1 - abs(y/h))",
+    "b": "hypot(x - y, y) % 150",
+    "w": 1000,
+    "h": 1000
+  },
+  {
+    "filename": "hotspot.jpg",
+    "r": "hypot(x, y)",
+    "g": "(255 * tan(x ^ y) + 1) % 256",
+    "b": "(255 * tan(x ^ y) + 1) % 256",
+    "w": 1000,
+    "h": 1000
+  },
+  {
+    "filename": "sierpinskis_trip.jpg",
+    "r": "(abs(x) ^ abs(y)) % (abs(x) & abs(y)) % 50",
+    "g": "(abs(x) ^ abs(y)) % (abs(x) & abs(y)) % 100",
+    "b": "(abs(x) ^ abs(y)) % (abs(x) & abs(y)) % 200",
+    "powerOf2Dim": true
+  },
+  {
+    "filename": "spiderweb.jpg",
+    "r": "sqrt(abs(x) % abs(y)) * sqrt(abs(y) % abs(x)) % 100",
+    "g": "sqrt(abs(x) % abs(y)) * sqrt(abs(y) % abs(x)) % 200",
+    "b": "sqrt(abs(x) % abs(y)) * sqrt(abs(y) % abs(x)) % 50",
+    "w": 1000,
+    "h": 1000
+  },
+  {
+    "filename": "cursed_eclipse.jpg",
+    "r": "hypot(x, y + 500)",
+    "g": "hypot(x, y) % (500 % hypot(x, y))",
+    "b": "hypot(x, y - 500)",
+    "w": 1000,
+    "h": 1000
+  },
+  {
+    "filename": "deep_bass.jpg",
+    "r": "hypot(x,y)",
+    "g": "hypot(x + (28 * sin(x)), y + x) % 100",
+    "b": "hypot(x + (28 * cos(x)), y + x) % 110",
+    "w": 1000,
+    "h": 1000
+  },
+  {
+    "filename": "sierpinski.jpg",
+    "r": "tanh(x & y)",
+    "g": "tanh(x & y)",
+    "b": "tanh(x & y)",
+    "powerOf2Dim": true
+  },
+  {
+    "filename": "oasis.jpg",
+    "r": "hypot(abs(x) ^ abs(y), abs(x) & abs(y)) % 50",
+    "g": "hypot(abs(x) ^ abs(y), abs(x) & abs(y)) % 100",
+    "b": "hypot(abs(x) ^ abs(y), abs(x) & abs(y)) % 200",
+    "powerOf2Dim": true
+  },
+  {
+    "filename": "circus.jpg",
+    "r": "cos(hypot(x, y) / hypot(w / 2.5, h / 2.5)) * tanh(x + y)",
+    "g": "cos(hypot(x, y) / hypot(w / 2.5, h / 2.5)) * tanh(x * y)",
+    "b": "cos(hypot(x, y) / hypot(w / 2.5, h / 2.5)) * tanh(x - y)",
+    "w": 1000,
+    "h": 1000
+  },
+  {
+    "filename": "rainbow.jpg",
+    "r": "x + y",
+    "g": "x * y",
+    "b": "x - y",
+    "w": 1000,
+    "h": 1000
+  }
+]

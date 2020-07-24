@@ -20,6 +20,8 @@ Use it to create images like these:
 
 [![Rainbow](https://sourabhdesai.github.io/PixelMist/images/examples/rainbow.jpg)](https://sourabhdesai.github.io/PixelMist/?example=rainbow.jpg)
 
+[![Oasis](https://sourabhdesai.github.io/PixelMist/images/examples/oasis.jpg)](https://sourabhdesai.github.io/PixelMist/?example=oasis.jpg)
+
 [![Sierpinksi](https://sourabhdesai.github.io/PixelMist/images/examples/sierpinski.jpg)](https://sourabhdesai.github.io/PixelMist/?example=sierpinski.jpg)
 
 [![Circus](https://sourabhdesai.github.io/PixelMist/images/examples/circus.jpg)](https://sourabhdesai.github.io/PixelMist/?example=circus.jpg)
